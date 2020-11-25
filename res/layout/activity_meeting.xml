@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MeetingActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <EditText
+        android:id="@+id/locationText"
+        android:layout_width="156dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Enter your meeting location"
+        android:includeFontPadding="false"
+        android:inputType="text"
+        android:singleLine="false"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/notesText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/create_meeting_label"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/locationText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/notesText"
+        android:layout_width="249dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:hint="Enter any notes about your meeting here."
+        android:inputType="textMultiLine"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/attendeeEntry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationText" />
+
+    <EditText
+        android:id="@+id/attendeeEntry"
+        android:layout_width="272dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="22dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/attendeeHint"
+        android:inputType="textMultiLine"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/addAttendee"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notesText" />
+
+    <TextView
+        android:id="@+id/meetingDate"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="91dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/datepicker_label"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/meetingTime"
+        app:layout_constraintEnd_toStartOf="@+id/meetingTime"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/meetingTime"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="55dp"
+        android:gravity="center_horizontal"
+        android:text="@string/pick_a_time"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/cancelMeeting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/meetingDate"
+        app:layout_constraintTop_toBottomOf="@+id/previousAttendees" />
+
+    <Button
+        android:id="@+id/cancelMeeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:onClick="CancelMeeting"
+        android:text="@string/cancel_meeting_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/createMeeting"
+        app:layout_constraintTop_toBottomOf="@+id/meetingTime" />
+
+    <Button
+        android:id="@+id/createMeeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="18dp"
+        android:onClick="CreateMeeting"
+        android:text="@string/create_meeting_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cancelMeeting"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ListView
+        android:id="@+id/previousAttendees"
+        android:layout_width="0dp"
+        android:layout_height="126dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/meetingTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addAttendee" />
+
+    <Button
+        android:id="@+id/addAttendee"
+        android:layout_width="82dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="25dp"
+        android:onClick="addAttendee"
+        android:text="@string/add_button_lable"
+        app:layout_constraintBottom_toTopOf="@+id/previousAttendees"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attendeeEntry" />
+
+</android.support.constraint.ConstraintLayout>

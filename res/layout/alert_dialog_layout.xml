@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="54dp"
+            android:layout_marginEnd="38dp"
+            android:text="@string/location_label"
+            app:layout_constraintEnd_toStartOf="@+id/mLocationText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mLocationText"
+            android:layout_width="265dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="19dp"
+            android:layout_marginStart="17dp"
+            app:layout_constraintBottom_toTopOf="@+id/mNotes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/mLocation" />
+
+        <TextView
+            android:id="@+id/mNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginBottom="12dp"
+            android:text="@string/notes_label"
+            app:layout_constraintBottom_toTopOf="@+id/mNotesText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mLocationText" />
+
+        <TextView
+            android:id="@+id/mNotesText"
+            android:layout_width="265dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginBottom="13dp"
+            app:layout_constraintBottom_toTopOf="@+id/mAttendees"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mNotes" />
+
+        <TextView
+            android:id="@+id/mAttendees"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/attendees_label"
+            app:layout_constraintBottom_toTopOf="@+id/mAttendeesText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mNotesText" />
+
+        <TextView
+            android:id="@+id/mAttendeesText"
+            android:layout_width="259dp"
+            android:layout_height="111dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginBottom="17dp"
+            app:layout_constraintBottom_toTopOf="@+id/mDateTimeText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mAttendees" />
+
+        <TextView
+            android:id="@+id/mDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginStart="17dp"
+            android:text="@string/date_and_time_label"
+            app:layout_constraintBaseline_toBaselineOf="@+id/mDateTimeText"
+            app:layout_constraintEnd_toStartOf="@+id/mDateTimeText"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/mDateTimeText"
+            android:layout_width="271dp"
+            android:layout_height="31dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="298dp"
+            android:layout_marginStart="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/mDateTime"
+            app:layout_constraintTop_toBottomOf="@+id/mAttendeesText" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

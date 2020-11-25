@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Meeting Manager</string>
+    <string name="CreateMeeting">Create Meeting</string>
+    <string-array name="font_sizes">
+        <item>12sp</item>
+        <item>18sp</item>
+        <item>20sp</item>
+    </string-array>
+
+    <string-array name="font_colours">
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Red</item>
+        <item>Black</item>
+        <item>White</item>
+    </string-array>
+
+    <string name="font_colour">com.example.conor.mobilecoursework.font_colour</string>
+    <string name="font_size">com.example.conor.mobilecoursework.font_size</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="attendeeHint">Enter any known attendees (Leave blank if none)</string>
+    <string name="pick_a_time">Pick A Time</string>
+    <string name="create_meeting_label">Create Meeting</string>
+    <string name="datepicker_label">Pick A Date</string>
+    <string name="add_button_lable">ADD</string>
+    <string name="create_meeting_button">Create Meeting</string>
+    <string name="cancel_meeting_button">Cancel Meeting</string>
+    <string name="date_and_time_label">Date And Time:</string>
+    <string name="attendees_label">Attendees:</string>
+    <string name="notes_label">Notes:</string>
+    <string name="location_label">Location:</string>
+    <string name="meeting_information_label">Meeting Information</string>
+    <string name="font_size_label">Font Size</string>
+    <string name="font_colour_label">Font Colour</string>
+    <string name="apply_changes_button">Apply Changes</string>
+</resources>
